@@ -8,13 +8,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# 模型文件
-*.pt
-*.pth
-*.onnx
-*.engine
-*.tflite
-models/
 
 # YOLO训练输出
 runs/
