@@ -1,0 +1,11 @@
+# 车辆识别数据集配置
+# 请根据实际路径修改
+
+path: /home/tu/opencode_ws/car_detect/data
+train: images/train
+val: images/val
+test: images/test
+
+# 类别名称
+names:
+  0: car
