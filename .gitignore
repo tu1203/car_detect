@@ -8,6 +8,15 @@ __pycache__/
 *.pyc
 *.pyo
 
+# 模型文件
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.torchscript
+models/weights/
+models/logs/
 
 # YOLO训练输出
 runs/

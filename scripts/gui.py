@@ -201,7 +201,7 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="车辆检测 GUI")
-    parser.add_argument("--model", default="models/car_detect/weights/best.pt",
+    parser.add_argument("--model", default="models/weights/best.pt",
                        help="模型路径")
     
     args = parser.parse_args()

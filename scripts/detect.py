@@ -204,6 +204,6 @@ if __name__ == "__main__":
     else:
         print("错误: 请指定输入源 (--source) 或使用 --realtime 模式")
         print("示例:")
-        print("  python detect.py --model ../models/car_detect/weights/best.pt --source image.jpg")
-        print("  python detect.py --model ../models/car_detect/weights/best.pt --source video.mp4")
-        print("  python detect.py --model ../models/car_detect/weights/best.pt --realtime")
+        print("  python detect.py --model ../models/weights/best.pt --source image.jpg")
+        print("  python detect.py --model ../models/weights/best.pt --source video.mp4")
+        print("  python detect.py --model ../models/weights/best.pt --realtime")
