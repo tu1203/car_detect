@@ -61,9 +61,9 @@ def train(
         deterministic=True,
     )
     
-    # 整理输出文件：模型和日志分开放置
+    # 整理输出文件：权重和日志分开放置
     output_dir = Path(project) / name
-    models_dir = Path(project) / "models"
+    weights_dir = Path(project) / "weights"
     logs_dir = Path(project) / "logs"
     
     models_dir.mkdir(exist_ok=True)
