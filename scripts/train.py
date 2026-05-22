@@ -3,6 +3,7 @@ YOLOv8 车辆检测训练脚本
 """
 from ultralytics import YOLO
 import argparse
+import shutil
 from pathlib import Path
 
 
@@ -60,8 +61,38 @@ def train(
         deterministic=True,
     )
     
+    # 整理输出文件：模型和日志分开放置
+    output_dir = Path(project) / name
+    models_dir = Path(project) / "models"
+    logs_dir = Path(project) / "logs"
+    
+    models_dir.mkdir(exist_ok=True)
+    logs_dir.mkdir(exist_ok=True)
+    
+    # 移动模型文件
+    weights_dir = output_dir / "weights"
+    if weights_dir.exists():
+        for pt_file in weights_dir.glob("*.pt"):
+            shutil.move(str(pt_file), str(models_dir / pt_file.name))
+        shutil.rmtree(output_dir)
+    
+    # 移动日志文件（图片、CSV、YAML）
+    for f in output_dir.glob("*.png"):
+        shutil.move(str(f), str(logs_dir / f.name))
+    for f in output_dir.glob("*.jpg"):
+        shutil.move(str(f), str(logs_dir / f.name))
+    for f in output_dir.glob("*.csv"):
+        shutil.move(str(f), str(logs_dir / f.name))
+    for f in output_dir.glob("*.yaml"):
+        shutil.move(str(f), str(logs_dir / f.name))
+    
+    # 删除临时输出目录
+    if output_dir.exists():
+        shutil.rmtree(output_dir)
+    
     print(f"\n训练完成!")
-    print(f"模型保存位置: {project}/{name}")
+    print(f"模型保存位置: {models_dir}")
+    print(f"日志保存位置: {logs_dir}")
     
     return results
 
