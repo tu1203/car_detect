@@ -23,8 +23,8 @@ car_detect/
 │   ├── gui.py               # GUI界面
 │   └── download_dataset.py  # 数据集下载
 ├── models/                  # 模型输出目录
-│   ├── weights/             # 模型文件
-│   └── logs/                # 训练日志
+│   ├── weights/             # 权重文件 (.pt)
+│   └── logs/                # 训练日志 (图片、CSV、配置)
 ├── requirements.txt         # Python依赖
 └── .gitignore
 ```
@@ -217,22 +217,22 @@ python scripts/gui.py
 
 | 指标 | 值 |
 |------|-----|
-| mAP50 | 0.86 (86%) |
-| mAP50-95 | 0.635 (63.5%) |
-| 训练轮数 | 100 epochs |
-| 训练数据 | 160 张图片 |
+| mAP50 | 0.897 (89.7%) |
+| mAP50-95 | 0.648 (64.8%) |
+| Precision | 0.889 |
+| Recall | 0.835 |
+| 训练轮数 | 50 epochs |
+| 训练数据 | 169 张图片 |
 | 验证数据 | 40 张图片 |
 | 训练设备 | RTX 3050 (4GB) |
-| 训练时间 | 约 5 分钟 |
+| 训练时间 | 约 2 分钟 |
 
 ### 模型文件
 
 ```
 models/weights/
-├── best.pt           (6.0MB)  PyTorch格式 - 最佳模型
-├── best.onnx         (12MB)   ONNX格式
-├── best.torchscript  (12MB)   TorchScript格式
-└── last.pt           (6.0MB)  最后一轮模型
+├── best.pt           (6.3MB)  PyTorch格式 - 最佳模型
+└── last.pt           (6.3MB)  最后一轮模型
 ```
 
 ---
