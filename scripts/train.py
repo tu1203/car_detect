@@ -66,14 +66,14 @@ def train(
     weights_dir = Path(project) / "weights"
     logs_dir = Path(project) / "logs"
     
-    models_dir.mkdir(exist_ok=True)
+    weights_dir.mkdir(exist_ok=True)
     logs_dir.mkdir(exist_ok=True)
     
     # 移动模型文件
-    weights_dir = output_dir / "weights"
-    if weights_dir.exists():
-        for pt_file in weights_dir.glob("*.pt"):
-            shutil.move(str(pt_file), str(models_dir / pt_file.name))
+    output_weights = output_dir / "weights"
+    if output_weights.exists():
+        for pt_file in output_weights.glob("*.pt"):
+            shutil.move(str(pt_file), str(weights_dir / pt_file.name))
         shutil.rmtree(output_dir)
     
     # 移动日志文件（图片、CSV、YAML）
@@ -91,7 +91,7 @@ def train(
         shutil.rmtree(output_dir)
     
     print(f"\n训练完成!")
-    print(f"模型保存位置: {models_dir}")
+    print(f"权重保存位置: {weights_dir}")
     print(f"日志保存位置: {logs_dir}")
     
     return results

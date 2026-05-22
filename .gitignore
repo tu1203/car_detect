@@ -8,8 +8,6 @@ __pycache__/
 *.pyc
 *.pyo
 
-# 训练日志
-models/logs/
 
 # YOLO训练输出
 runs/
