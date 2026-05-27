@@ -53,7 +53,7 @@ def export_model(
 
 def export_all_formats(model_path: str, imgsz: int = 640):
     """导出所有常用格式"""
-    formats = ["onnx", "torchscript"]
+    formats = ["onnx", "torchscript", "engine"]
     
     for fmt in formats:
         print(f"\n{'='*50}")

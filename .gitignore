@@ -7,10 +7,8 @@ env/
 __pycache__/
 *.pyc
 *.pyo
+a
 
-
-# YOLO训练输出
-runs/
 
 # ultralytics配置
 .ultralytics/
