@@ -1,6 +1,6 @@
 # Car Detect - 车辆检测项目
 
-基于 YOLOv8 的汽车目标检测项目，支持训练、导出和实时推理。支持 NVIDIA Jetson 设备部署。
+基于 YOLOv8 的汽车目标检测项目，支持训练、导出和实时推理。支持 NVIDIA Jetson 设备部署，新增 TensorRT 推理加速。
 
 ## 项目结构
 
