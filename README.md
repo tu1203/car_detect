@@ -26,8 +26,6 @@ car_detect/
 │   ├── weights/             # 权重文件 (.pt, .onnx, .engine)
 │   └── logs/                # 训练日志 (图片、CSV、配置)
 ├── requirements.txt         # Python依赖
-├── torch-*.whl              # Jetson PyTorch wheel
-├── torchvision-*.whl        # Jetson torchvision wheel (源码编译)
 └── .gitignore
 ```
 
@@ -72,7 +70,7 @@ sudo apt-get -y install libopenblas-dev libopenmpi-dev libomp-dev
 
 #### 3. 安装 Jetson 专用 PyTorch
 
-项目提供了预编译的 wheel 文件（NVIDIA Jetson 专用版本）：
+从 NVIDIA 官方论坛下载预编译的 wheel 文件（NVIDIA Jetson 专用版本）：
 
 ```bash
 # 安装 PyTorch (JetPack 6.1)

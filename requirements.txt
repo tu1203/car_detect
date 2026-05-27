@@ -10,10 +10,10 @@ pillow>=9.5.0
 # 以下依赖在 Jetson 设备上需要特殊安装，详见 README.md
 #
 # PyTorch (JetPack 6.x):
-#   pip install torch-2.5.0a0+872d972e41.nv24.08.17622132-cp310-cp310-linux_aarch64.whl
+#   从 NVIDIA 官方论坛下载 wheel 文件安装
 #
 # TorchVision (从源码编译):
-#   pip install torchvision-0.20.0a0+afc54f7-cp310-cp310-linux_aarch64.whl
+#   从源码编译安装
 #
 # TensorRT (系统包):
 #   ln -s /usr/lib/python3.10/dist-packages/tensorrt .venv/lib/python3.10/site-packages/
