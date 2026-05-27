@@ -7,7 +7,7 @@ env/
 __pycache__/
 *.pyc
 *.pyo
-a
+runs/
 
 
 # ultralytics配置
