@@ -21,3 +21,6 @@ runs/
 .DS_Store
 Thumbs.db
 car_data/
+
+# 预编译包
+*.whl
